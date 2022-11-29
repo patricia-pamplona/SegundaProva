@@ -10,4 +10,12 @@
         android:name="com.example.segundaprova.fragments.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/cadastraFragment"
+        android:name="com.example.segundaprova.fragments.home.cadastro.CadastraFragment"
+        android:label="CadastraFragment" >
+        <action
+            android:id="@+id/action_cadastraFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+    </fragment>
 </navigation>
