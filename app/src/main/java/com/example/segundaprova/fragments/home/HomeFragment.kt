@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.segundaprova.R
 import com.example.segundaprova.databinding.FragmentHomeBinding
 import com.example.segundaprova.fragments.home.adapter.PersonagemFilmeAdapter
@@ -30,11 +31,12 @@ class HomeFragment : Fragment() {
 
         val adapter = PersonagemFilmeAdapter()
 
-        viewModel.personagens.observe(viewLifecycleOwner, {
+        viewModel.personagens.observe(viewLifecycleOwner) {
             adapter.submitList(it)
-        })
+        }
 
         binding.recyclerView.adapter = adapter
+        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.addOnItemTouchListener(
             RecyclerViewClickListener(binding.recyclerView, object : RecyclerViewClickListener.OnItemClickListener{
                 override fun onItemClick(view: View, position: Int) {
