@@ -6,14 +6,14 @@
     <data>
         <variable
             name="viewmodel"
-            type="com.example.segundaprova.fragments.home.cadastro.CadastraViewModel" />
+            type="com.example.segundaprova.fragments.home.altera.AlteraViewModel" />
         <import type="com.example.segundaprova.converters.DataBindingConverters"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".fragments.home.cadastro.CadastraFragment">
+        tools:context=".fragments.home.altera.AlteraFragment">
 
         <EditText
             android:id="@+id/editTextNome"
@@ -111,13 +111,14 @@
             app:layout_constraintTop_toTopOf="@+id/textView" />
 
         <Button
-            android:id="@+id/buttonCadastra"
+            android:id="@+id/buttonAltera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="101dp"
-            android:text="Cadastrar"
+            android:text="Alterar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-</layout>
+
+</layout >

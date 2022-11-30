@@ -15,7 +15,7 @@ class DataBindingConverters {
         }
 
         @JvmStatic
-        fun convertIntToString(value: Float?): String {
+        fun convertIntToString(value: Int?): String {
             return value?.toString() ?: ""
         }
     }

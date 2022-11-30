@@ -18,4 +18,12 @@
             android:id="@+id/action_cadastraFragment_to_homeFragment2"
             app:destination="@id/homeFragment2" />
     </fragment>
+    <fragment
+        android:id="@+id/alteraFragment"
+        android:name="com.example.segundaprova.fragments.home.altera.AlteraFragment"
+        android:label="AlteraFragment" >
+        <action
+            android:id="@+id/action_alteraFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+    </fragment>
 </navigation>

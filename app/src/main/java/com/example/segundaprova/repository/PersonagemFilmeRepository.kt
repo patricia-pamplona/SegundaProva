@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 
-class PersonagemFilmeRepository @Inject constructor(var dao: PersonagemFilmeDao) : IPersonagemFilmeRepository {
+class PersonagemFilmeRepository @Inject constructor(private var dao: PersonagemFilmeDao) : IPersonagemFilmeRepository {
     override fun listAll(): Flow<List<PersonagemFilme>> {
         return dao.listAll()
     }
@@ -14,4 +14,5 @@ class PersonagemFilmeRepository @Inject constructor(var dao: PersonagemFilmeDao)
     override fun create(r: PersonagemFilme) {
         dao.create(r)
     }
+
 }
