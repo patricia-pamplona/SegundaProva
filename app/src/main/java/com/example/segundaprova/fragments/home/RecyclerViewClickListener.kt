@@ -5,7 +5,9 @@ import android.content.Context
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
+import com.example.segundaprova.R
 
 class RecyclerViewClickListener(view:RecyclerView, listener:OnItemClickListener):RecyclerView.OnItemTouchListener {
     var gestureDetector: GestureDetector
@@ -19,6 +21,7 @@ class RecyclerViewClickListener(view:RecyclerView, listener:OnItemClickListener)
         gestureDetector = GestureDetector(view.context, object : GestureDetector.SimpleOnGestureListener(){
             override fun onSingleTapUp(e: MotionEvent): Boolean {
                 super.onSingleTapUp(e)
+                Navigation.findNavController(view).navigate(R.id.action_homeFragment2_to_detalhesFragment)
                 val childView = view.findChildViewUnder(e.x, e.y)
                 if (childView != null){
                     listener.onItemClick(childView, view.getChildAdapterPosition(childView))
@@ -28,6 +31,7 @@ class RecyclerViewClickListener(view:RecyclerView, listener:OnItemClickListener)
 
             override fun onLongPress(e: MotionEvent) {
                 super.onLongPress(e)
+                Navigation.findNavController(view).navigate(R.id.action_homeFragment2_to_alteraFragment)
                 val childView = view.findChildViewUnder(e.x, e.y)
                 if (childView != null){
                     listener.onItemLongClick(childView, view.getChildAdapterPosition(childView))

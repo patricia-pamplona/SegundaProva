@@ -9,7 +9,14 @@
         android:id="@+id/homeFragment2"
         android:name="com.example.segundaprova.fragments.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_detalhesFragment"
+            app:destination="@id/detalhesFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_alteraFragment"
+            app:destination="@id/alteraFragment" />
+    </fragment>
     <fragment
         android:id="@+id/cadastraFragment"
         android:name="com.example.segundaprova.fragments.home.cadastro.CadastraFragment"
@@ -26,4 +33,8 @@
             android:id="@+id/action_alteraFragment_to_homeFragment2"
             app:destination="@id/homeFragment2" />
     </fragment>
+    <fragment
+        android:id="@+id/detalhesFragment"
+        android:name="com.example.segundaprova.fragments.home.detalhes.DetalhesFragment"
+        android:label="DetalhesFragment" />
 </navigation>
