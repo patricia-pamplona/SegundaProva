@@ -1,12 +1,12 @@
 package com.example.segundaprova.fragments.home
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
+import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.segundaprova.R
 import com.example.segundaprova.databinding.FragmentHomeBinding
@@ -48,7 +48,10 @@ class HomeFragment : Fragment() {
                 }
 
             }))
-
+        setHasOptionsMenu(true)
         return binding.root
     }
+
+
+
 }

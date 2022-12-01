@@ -15,4 +15,8 @@ class PersonagemFilmeRepository @Inject constructor(private var dao: PersonagemF
         dao.create(r)
     }
 
+    override fun update(r: PersonagemFilme) {
+        dao.update(r)
+    }
+
 }

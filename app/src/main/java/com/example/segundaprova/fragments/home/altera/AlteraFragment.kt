@@ -23,13 +23,17 @@ class AlteraFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding.buttonAltera.setOnClickListener{
-            viewModel.alterarButtonEvent()
+            viewModel.alterarButtonEvent(viewModel.personagemFilme.value!!)
             Navigation.findNavController(it).navigate(R.id.action_cadastraFragment_to_homeFragment2)
             Toast.makeText(requireContext(), "Personagem cadastrado com sucesso!", Toast.LENGTH_SHORT).show()
         }
 
         viewModel = ViewModelProvider(this).get(AlteraViewModel::class.java)
         binding = FragmentAlteraBinding.inflate(inflater, container, false)
+
+
+
+        setHasOptionsMenu(true)
         // Inflate the layout for this fragment
         return binding.root
     }
