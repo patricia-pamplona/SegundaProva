@@ -32,7 +32,7 @@ class CadastraFragment : Fragment() {
 
         binding.buttonCadastra.setOnClickListener{
             viewModel.cadastrarButtonEvent()
-            Navigation.findNavController(it).navigate(R.id.action_cadastraFragment_to_homeFragment2)
+            Navigation.findNavController(it).navigate(R.id.action_cadastraFragment_to_homeFragment)
             Toast.makeText(requireContext(), "Personagem cadastrado com sucesso!", Toast.LENGTH_SHORT).show()
         }
         // Inflate the layout for this fragment

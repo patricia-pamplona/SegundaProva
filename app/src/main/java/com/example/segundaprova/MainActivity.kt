@@ -14,6 +14,8 @@ import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 import com.example.segundaprova.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
+import com.example.segundaprova.R
+
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -35,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.homeFragment2, R.id.cadastraFragment
+                R.id.homeFragment, R.id.cadastraFragment
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

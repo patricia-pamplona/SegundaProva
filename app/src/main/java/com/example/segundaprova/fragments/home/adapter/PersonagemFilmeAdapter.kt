@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.segundaprova.databinding.PersonagemViewBinding
 import com.example.segundaprova.dominio.PersonagemFilme
 
+
 class PersonagemFilmeAdapter : ListAdapter<PersonagemFilme, PersonagemFilmeAdapter.PersonagemFilmeViewHolder>(RemedioDiffUtilCallback()){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PersonagemFilmeViewHolder {

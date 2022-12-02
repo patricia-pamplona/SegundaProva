@@ -29,7 +29,7 @@ class AlteraFragment : Fragment() {
 
         binding.buttonAltera.setOnClickListener{
             viewModel.alterarButtonEvent(viewModel.personagemFilme.value!!)
-            Navigation.findNavController(it).navigate(R.id.action_cadastraFragment_to_homeFragment2)
+            Navigation.findNavController(it).navigate(R.id.action_alteraFragment_to_homeFragment)
             Toast.makeText(requireContext(), "Personagem cadastrado com sucesso!", Toast.LENGTH_SHORT).show()
         }
 
