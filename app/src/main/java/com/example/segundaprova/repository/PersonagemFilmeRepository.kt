@@ -19,4 +19,8 @@ class PersonagemFilmeRepository @Inject constructor(private var dao: PersonagemF
         dao.update(r)
     }
 
+    override fun findById(id: Long): PersonagemFilme? {
+        return dao.findById(id)
+    }
+
 }

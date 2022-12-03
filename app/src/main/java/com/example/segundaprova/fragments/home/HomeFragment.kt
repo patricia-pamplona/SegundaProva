@@ -40,10 +40,13 @@ class HomeFragment : Fragment() {
         binding.recyclerView.addOnItemTouchListener(
             RecyclerViewClickListener(binding.recyclerView, object : RecyclerViewClickListener.OnItemClickListener{
                 override fun onItemClick(view: View, position: Int) {
+                    val action = HomeFragmentDirections.actionHomeFragmentToDetalhesFragment(adapter.currentList[position].id)
+                    Navigation.findNavController(view).navigate(action)
                     Toast.makeText(requireContext(), "Toque simples", Toast.LENGTH_SHORT).show()
                 }
 
                 override fun onItemLongClick(view: View, position: Int) {
+                    Navigation.findNavController(view).navigate(HomeFragmentDirections.actionHomeFragmentToAlteraFragment())
                     Toast.makeText(requireContext(), "Toque longo", Toast.LENGTH_SHORT).show()
                 }
 

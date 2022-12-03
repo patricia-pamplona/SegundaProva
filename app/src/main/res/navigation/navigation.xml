@@ -39,5 +39,9 @@
     <fragment
         android:id="@+id/detalhesFragment"
         android:name="com.example.segundaprova.fragments.home.detalhes.DetalhesFragment"
-        android:label="DetalhesFragment" />
+        android:label="DetalhesFragment" >
+        <argument
+            android:name="id"
+            app:argType="long" />
+    </fragment>
 </navigation>
