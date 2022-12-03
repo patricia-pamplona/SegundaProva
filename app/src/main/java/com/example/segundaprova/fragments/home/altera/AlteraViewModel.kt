@@ -19,11 +19,19 @@ class AlteraViewModel @Inject constructor(private var repository: PersonagemFilm
         personagemFilme.value = PersonagemFilme("","","","",0)
     }
 
-    fun alterarButtonEvent(p: PersonagemFilme) {
-        personagemFilme.value = p
+    fun carregarPersonagemFilme(id: Long) {
+        viewModelScope.launch {
+            withContext(Dispatchers.IO){
+                personagemFilme.postValue(repository.findById(id))
+            }
+        }
+    }
+
+    fun alterarButtonEvent() {
+
         viewModelScope.launch {
             withContext(Dispatchers.IO) {
-                repository.update(p)
+                repository.update(personagemFilme.value!!)
             }
         }
     }

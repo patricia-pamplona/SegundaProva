@@ -19,8 +19,8 @@
             android:id="@+id/editTextNome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="17dp"
-            android:layout_marginTop="11dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             android:ems="10"
             android:hint="Digite o nome..."
             android:inputType="textPersonName"
@@ -42,8 +42,8 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="21dp"
-            android:layout_marginTop="18dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="21dp"
             android:text="gênero"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextNome" />
@@ -52,8 +52,8 @@
             android:id="@+id/editTextGenero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="21dp"
-            android:layout_marginTop="13dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             android:ems="10"
             android:hint="Digite o gênero..."
             android:inputType="textPersonName"
@@ -66,58 +66,81 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_marginStart="21dp"
-            android:layout_marginBottom="18dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="31dp"
             android:text="Características"
-            app:layout_constraintBottom_toTopOf="@+id/editTextCaracteristicas"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextGenero" />
 
         <EditText
             android:id="@+id/editTextCaracteristicas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_marginBottom="18dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             android:ems="10"
             android:hint="Digite aqs características..."
             android:inputType="textPersonName"
             android:text="@={viewmodel.personagemFilme.caracteristicasFisicas}"
-            app:layout_constraintBottom_toTopOf="@+id/textView4"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="21dp"
-            android:layout_marginBottom="13dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="23dp"
             android:text="ano"
-            app:layout_constraintBottom_toTopOf="@+id/editTextAnoFilme"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextCaracteristicas" />
 
         <EditText
             android:id="@+id/editTextAnoFilme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="325dp"
-            android:layout_marginBottom="324dp"
+            android:layout_marginTop="8dp"
             android:ems="10"
             android:hint="Digite o ano do filme..."
             android:inputType="textPersonName"
             android:text="@={DataBindingConverters.convertIntToString(viewmodel.personagemFilme.ano)}"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
         <Button
             android:id="@+id/buttonCadastra"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="101dp"
+            android:layout_marginStart="143dp"
+            android:layout_marginEnd="143dp"
+            android:layout_marginBottom="50dp"
             android:text="Cadastrar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="23dp"
+            android:text="Título:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextAnoFilme" />
+
+        <EditText
+            android:id="@+id/editTextFilme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Digite o título do filme..."
+            android:text="@={viewmodel.personagemFilme.filme}"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -46,7 +46,8 @@ class HomeFragment : Fragment() {
                 }
 
                 override fun onItemLongClick(view: View, position: Int) {
-                    Navigation.findNavController(view).navigate(HomeFragmentDirections.actionHomeFragmentToAlteraFragment())
+                    val action = HomeFragmentDirections.actionHomeFragmentToAlteraFragment(adapter.currentList[position].id)
+                    Navigation.findNavController(view).navigate(action)
                     Toast.makeText(requireContext(), "Toque longo", Toast.LENGTH_SHORT).show()
                 }
 

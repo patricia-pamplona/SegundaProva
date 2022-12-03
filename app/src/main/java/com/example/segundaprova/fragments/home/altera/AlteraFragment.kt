@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.navigation.Navigation
 import com.example.segundaprova.R
 import com.example.segundaprova.databinding.FragmentAlteraBinding
+import com.example.segundaprova.fragments.home.detalhes.DetalhesFragmentArgs
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -24,13 +25,15 @@ class AlteraFragment : Fragment() {
     ): View? {
         viewModel = ViewModelProvider(this).get(AlteraViewModel::class.java)
         binding = FragmentAlteraBinding.inflate(inflater, container, false)
+        val args = AlteraFragmentArgs.fromBundle(requireArguments())
+        viewModel.carregarPersonagemFilme(args.id)
         binding.viewmodel = viewModel
         binding.lifecycleOwner = this
 
         binding.buttonAltera.setOnClickListener{
-            viewModel.alterarButtonEvent(viewModel.personagemFilme.value!!)
+            viewModel.alterarButtonEvent()
             Navigation.findNavController(it).navigate(R.id.action_alteraFragment_to_homeFragment)
-            Toast.makeText(requireContext(), "Personagem cadastrado com sucesso!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "Personagem alterado com sucesso!", Toast.LENGTH_SHORT).show()
         }
 
 
