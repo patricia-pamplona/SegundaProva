@@ -103,7 +103,7 @@
             android:layout_marginTop="8dp"
             android:ems="10"
             android:hint="Digite o ano do filme..."
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:text="@={DataBindingConverters.convertIntToString(viewmodel.personagemFilme.ano)}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
